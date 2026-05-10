@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Build a cat photo app with HTML and CSS.">
+    <style>
+        body {
+            background: #f7f7fc;
+        }
+
+        #sidebar-mount {
+            background: #111;
+        }
+    </style>
+    <link rel="stylesheet" href="../../../assets/plain-style.css" />
+    <title>Build A Cat Photo App</title>
+</head>
+
+<body data-page="cat-photo-app">
+    <a class="skip-link" href="#overview">Skip to content</a>
+    <header class="topic-bar">
+        <div class="topic-bar__title">
+            <button class="nav-toggle" type="button" aria-controls="sidebar-mount" aria-expanded="false">
+                ☰ <span class="sr-only">Menu</span>
+            </button>
+            <h1>Workshop: City Infrastructure - Wave Checker Website</h1>
+        </div>
+    </header>
+    <div id="sidebar-mount"></div>
+    <main class="lab-content">
+        <div class="no-style">
+            <h1>Wave website</h1>
+            <h2>Problem</h2>
+            <ul>
+                <li>
+                    Jack Mayers cities data centre powers most of the city's technical infrastructure, but takes months
+                    to get and set up new resources
+                </li>
+                <li>One example is that the residents that use the city's web portal to check wave condtions at the
+                    beach: Surfers looks for big waves, while familles check for calmer conditions to stay safe, but the
+                    servers that deliver wave forecasts keep breaking down, they can't seem to keep them running
+                    reliably.</li>
+            </ul>
+            <h2>Solution</h2>
+            <ul>
+                <li>Move to AWS Cloud infrastructure, which is more reliable and scalable, and can
+                    handle the fluctuating demand of the city's web portal.</li>
+                <li>The original website is static, so the website can be moved to Amazon S3 and is able to
+                    use its webhosting feature</li>
+                <li>After we add your website files to S3 we can turn on the website hosting feature</li>
+            </ul>
+            <img src="step5.png" alt="Diagram of the wave website architecture" class="responsive-img">
+            <h3>Amazon S3 Buckets</h3>
+            <ul>
+                <li>Amazon S3 provides storage and retrieval of any amount of data from anywhere on
+                    the web.
+                    <a href="../../../aws-notes/aws-overview.html">Overview of AWS</a>
+                </li>
+                <li>In Amazon S3, data is stored as objects (files and their associated metadata) within
+                    containers called buckets.</li>
+                <li>This solution uses an S3 bucket to host a static website, capable of handling unlimited
+                    traffic volumes cost-effectively, removing the need for traditional web server management.
+                </li>
+                <li>The S3 bucket stores both the HTML file and supporting assets (such as client-side scripts
+                    and style sheets) required for website functionality. Any S3 bucket can be enabled for
+                    static website hosting.</li>
+                <li>When configured for website hosting, the S3 bucket receives a dedicated URL. Requests to
+                    this URL prompt Amazon S3 to serve the bucket's designated root object (typically the main
+                    HTML file).</li>
+                <li>Access to the S3 bucket and its contents is controlled through permissions, which are defined in a
+                    bucket policy.</li>
+                <li>A bucket policy, written in JSON format, specifies who can access the bucket and what operations
+                    they can perform.
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer class="lab-footer">
+        <hr>
+        <em>This exercise was to create a wave checker website.</em>
+        <a href="https://simulearn.skillbuilder.aws/assignment/8e41d938-83e8-47ef-88d1-8c9db557dea8?section=learn&step=1&language=en-US"
+            target="_blank" rel="noopener noreferrer">Workshop: Wave Checker Website</a>
+        </div>
+    </footer>
+    <script src="../../../assets/sidebar.js"></script>
+    <script src="../../../assets/nav-toggle.js"></script>
+
+</body>
+
+</html>

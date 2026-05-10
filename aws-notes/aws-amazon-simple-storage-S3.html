@@ -169,11 +169,27 @@
                 <li>If you overwrite an object, it results in a new object version as long as the object has not been
                     deleted</li>
 
-                https://simulearn.skillbuilder.aws/assignment/8e41d938-83e8-47ef-88d1-8c9db557dea8?section=learn&step=1&video=478da748-ba29-4102-a0af-efee11f03f8c&language=en-US
-
-                //Amazon s3 more features 5:00
-
             </ul>
+            <h3>Amazon S3 - Access Management</h3>
+            <ul>
+                <li>By default all Amazon S3 resources, such as buckets and objects, are private.</li>
+                <li>Only the resource owner and the AWS account that created can access the resource</li>
+                <li>The resource owner can optionally grant access to others by writing an access policy</li>
+                <li>Amazon S3 offers access policy options that can be broadly catergorized as resource-based policies
+                    and user policies</li>
+                <li>Resource-based policies are access policies that you attach to your resources such as buckets and
+                    objects</li>
+                <li>Bucket policies and access control lists, or ACL's are resource-based policies</li>
+                <li>You can also authenticate certain types of data using query-string authentication to grant temporary
+                    access to others with time limited URL's</li>
+                <li>User policies are access policies that you attach to users</li>
+                <li>Access can be accessed to users using AWS IAM policies</li>
+                <li>You may choose to use resource-based policies, user policies, or some combination of these to manage
+                    permissions to your Amazon S3 resources</li>
+                <li>Access Control List is a legacy access control mechanism</li>
+                <li>As a general rule, AWS recommends using S3 bucket policies or IAM polices for access control. </li>
+                <li>When Amazon S3 recieves a request it must evaluate all the access polices to determine whether to
+                    authorize or deny the request</li>
         </section>
 
         <!-- Keywords -->
