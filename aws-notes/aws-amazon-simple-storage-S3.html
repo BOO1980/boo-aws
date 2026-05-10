@@ -190,6 +190,51 @@
                 <li>As a general rule, AWS recommends using S3 bucket policies or IAM polices for access control. </li>
                 <li>When Amazon S3 recieves a request it must evaluate all the access polices to determine whether to
                     authorize or deny the request</li>
+                <li>Access control lists: Each bucket and object has an access control list or ACL associated with it
+                </li>
+                <li>Amazon S3 specific XML schema. It defines which AWS accounts or groups are granted access and the
+                    type of access they have. </li>
+                <li>When you create a bucket or an object, Amazon S3 creates a default ACL. That grants the resource
+                    owner full control over the resource. </li>
+                <li>You can use access control lists to grant basic read/write permissions to other AWS accounts or
+                    groups.</li>
+                <li>A Bucket policy, written in JSON, is attached to an S3 bucket. It provides access permissions to the
+                    S3 bucket and all object in it</li>
+                <li>This is an example of an S3 Bucket policy
+                    <ul>
+                        <img src="/assets/images/example-s3-bucket-policy.png" alt="Example of an S3 bucket policy">
+                        <li>This S3 bucket policy allows the principal, the root account, and the IAM user Alice under
+                            that account to perform any S3 operations</li>
+                        <li>The wildcard asterisk character after the S3 in the action statement indicates that all S3
+                            operations are allowed</li>
+                        <li>You can perform S3 operations only on specific resources as shown in the resource statement
+                        </li>
+                        <li>In this case, only the S3 bucket with the name "my_bucket" and all its objects are allowed.
+                        </li>
+
+                        <li>As you can see, you can use the slash and asterisk after the bucket name to indicate all
+                            objects in the bucket.</li>
+                    </ul>
+                </li>
+                <li>User policies control who has access to your Amazon S3 resources And is also written in JSON. </li>
+                <li>You can use AWS Identity and Access Management or AWS IAM. To create. Users, groups and roles in
+                    your account.
+                    And attach access policies to grant them access to Amazon S3. </li>
+                <li>Is an example of an IAM policy.
+                    <ul>
+                        <img src="/assets/images/example-iam-policy.png" alt="Example of an IAM policy">
+                        <li>Unlike bucket policies. An IAM policy does not require a principal. Element because the
+                            principal is by default the entity that that IAM policy is attached to. </li>
+                        <li>The first part of the policy specifies bucket level permissions. It allows the ListBucket
+                            action so that applications can list all objects in the test bucket.
+                        <li>The second part specifies object level permissions. It allows PutObject, GetObject and
+                            DeleteObject actions so that applications can write, read and delete any objects in the test
+                            bucket. </li>
+                    </ul>
+                </li>I.
+
+
+
         </section>
 
         <!-- Keywords -->
